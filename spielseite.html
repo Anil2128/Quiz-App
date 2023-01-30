@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="js/app.js" defer></script>
+    <title>QuizGame</title>
+  </head>
+
+  <body>
+    <div id="wrapper-spielseite" class="wrapper">
+      <!-- Wrapper des Spiels -->
+      <div>
+        <div id="quiz-header">
+          <h2 id="question"></h2>
+          <!--Hier kommt die Frage rein über Javascript-->
+        </div>
+      </div>
+
+      <div id="answers">
+        <!-- Antworten und Punkte zum wählen der Antwort -->
+        <ul>
+          <li>
+            <input type="radio" id="a" name="answer" />
+            <div class="label-container">
+              <label for="a" id="a_text"></label>
+              <!-- Antworten -->
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="b" name="answer" />
+            <div class="label-container">
+              <label for="b" id="b_text"></label>
+              <!-- Antworten -->
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="c" name="answer" />
+            <div class="label-container">
+              <label for="c" id="c_text"></label>
+              <!-- Antworten -->
+            </div>
+          </li>
+          <li>
+            <input type="radio" id="d" name="answer" />
+            <div class="label-container">
+              <label for="d" id="d_text"></label>
+              <!-- Antworten -->
+            </div>
+          </li>
+        </ul>
+        <div id="btn-container">
+          <button id="weiter" class="btn">Weiter</button>
+        </div>
+      </div>
+
+      <!-- SpielEnde -->
+      <div id="spielende" class="spielende-passiv">
+        <h2><span id="sieg">&nbsp;</span></h2>
+        <div id="ergebnis-container">
+          <p>Richtige Antworten :<span id="correct"></span></p>
+          <p>Punktzahl:<span id="punkte"></span></p>
+          <button id="newGame" class="btn">NEUSTART</button>
+          <button id="result-btn" class="btn">LÖSUNGEN</button>
+        </div>
+      </div>
+      <!-- SpielEnde -->
+
+      <!-- Lösungen -->
+      <div id="loesungen" class="loesungen-passiv">
+        <div id="result-frage">Frage</div>
+        <div id="result-antwort">
+          <div>Antwort1</div>
+        </div>
+        <button id="newGameResult">NEUSTART</button>
+        <button id="nextQuestion">WEITER</button>
+      </div>
+      <!-- Lösungen -->
+    </div>
+  </body>
+</html>
